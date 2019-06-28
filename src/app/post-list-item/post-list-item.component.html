@@ -1,0 +1,13 @@
+<li [ngClass]="{'list-group-item': loveIts === 0, 'list-group-item-success': loveIts > 0, 'list-group-item-danger': loveIts < 0}">
+    
+    <div class="navbar-right ajust">{{ created_at | date: 'short' }}</div>
+
+    <h2> {{ title }} </h2>
+    <p>{{ content }}</p>
+    <button class="btn btn-success" (click)="onLoveIt()">Love it</button>
+    <button class="btn btn-danger" (click)="onDontLoveIt()">Don't love it</button>
+    <button class="btn btn-danger" (click)="onDeletePost()">Supprimer post</button>
+
+    <div class="navbar-right ajust">loveIts : {{ loveIts }}</div>
+    
+</li>
